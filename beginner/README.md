@@ -6,6 +6,7 @@
 	- [Databases](#databases)
 	- [Tables](#tables)
 	- [Relational Databases](#relational-databases)
+- [SQL](#sql)
 - [Sources](#sources)
 
 
@@ -14,10 +15,10 @@
 
 ## Understanding Relational Databases
 ### Databases
-Put simply, a **database** is an organized collection of data. However, with such a loose definition, there can exist a wide variety of databases, some of which must be more effective than others. For our purposes, we will be studying a special type of database known as the *relational database*, which derives its strengths from the restrictions that it has over the previously defined database. This data modeling paradigm has found great success in practice, as most databases today are structured relationally. To properly understand relational databases, we first need to understand tables and their properties.
+Put simply, a **database** is an organized collection of data. However, with such a loose definition, there can exist a wide variety of databases, some of which must be more effective than others. For the purpose of learning SQL, we seek to understand a special type of database known as the *relational database*, which derives its strengths from the restrictions that it has over the vaguely defined database. This way of organizing data has found great success in practice, as most databases today are structured relationally. To properly understand relational databases, we first need to understand tables and their properties.
 
 ### Tables
-In a **table**, each row denotes a record or observation of data, and each column denotes a variable or attribute of the data. For example, suppose we have a table containing data about a number of Data Science at UCSB officers.
+Data is commonly stored in tables, but in the context of relational databases, truly tabular data exhibits particular qualities that make them effective stores of data. In a **table**, each row denotes a record or observation of data, and each column denotes a variable or attribute of the data. For example, suppose we have a table containing data about three Data Science at UCSB officers.
 
 name | major | favorite food
 --- | --- | ---
@@ -25,13 +26,12 @@ Samantha | Statistics |
 Arthur | Computer Science | hamburgers
 Jonny | Communication | lobster rolls
 
-We can see that each non-header row contains data pertaining to a single student. Moreover, for each student, we have three attributes separated by the three columns: `name`, `major`, and `favorite food`.
+We can see that each non-header row contains data pertaining to a single officer. Moreover, for each officer, we have three attributes separated by the three columns: `name`, `major`, and `favorite food`.
 
 The takeaway here is that for any data to be considered as tabular data,
 1. each row must represent an instance of a particular class such that from one row to the next, the class remains the same
-    - in the case of data collected from an experiment, each row can represent a single trial
 2. each column must represent an attribute or facet of the data
-    - revisiting our example of data collected from an experiment, each column would represent a characteristic for a trial (e.g., trial conductor, location of trial, time trial was ran, whether or not the trial succeeded)
+
 
 ### Relational Databases
 With an understanding of tables and their properties, we can now begin to understand the relational database. We will start by presenting an example of a non-relational database. Suppose we are a university where students take two courses per quarter, and we store enrollment data in a database. Our database might consist of the following tables:
@@ -56,19 +56,19 @@ CS 101 | Solving NP-complete Problems in P Time | A. Lovelace | HFH 1901 | T R
 COMM 101 | Public Speaking on a National Stage | M. King Jr. | CAMPBHALL | M W
 PSTAT 101 | Literally Predicting the Future | T. Bayes | PSYCH 1924 | M W F
 
-In this example, the tables `course_enrollments`, and `courses` indeed constitute a database in the sense that the two tables are considered organized data; however, due to the way it's structured, this database doesn't fully exhibit the benefits offered by storing data in numerous tables. These benefits would be fully exhibited in the case of a *relational database*.
+In this example, the tables `course_enrollments` and `courses` indeed constitute a database in the sense that the two tables are considered organized data; however, due to the way it's structured, this database doesn't fully exhibit the benefits offered by storing data in numerous tables. These benefits would be fully exhibited in the case of a *relational database*.
 
 A **relational database** is a database which is organized based on the principals of the [relational model](https://en.wikipedia.org/wiki/Relational_model). To understand these principals and the benefits they provide, we will begin with a critique of our university database.
 
-A weakness of the database is redundancy; there are multiple cases where data is unnecessarily repeated. In the table `course_enrollments`, each student's name, major, and year are stored twice because they each enrolled in two courses. Furthermore, in the same table, data about the course `WRIT 101`'s location and professor occurs multiple times. Not only is data repeated within the table `course_enrollments`, but also across different tables; data regarding each course's professor and location is stored in both tables. Redundancy in databases is considered a weakness because it implies wasted storage space. Why store any more data than you need to? Additionally, if data occurs in multiple locations, any updates to that data will have to be made in all locations. For example, if the location for course `WRIT 101` were to change to `SSMS 1303`, we would have to update our data on four occasions (three times in `course_enrollments` and once in `courses`).
+A weakness of the database is redundancy; there are multiple cases where data is unnecessarily repeated. In the table `course_enrollments`, each student's name, major, and year are stored twice because they each enrolled in two courses. Furthermore, in the same table, data about the course `WRIT 101`'s location and professor occurs multiple times. Not only is data repeated within the table `course_enrollments`, but also across different tables; data regarding each course's professor and location is stored in both tables. Redundancy in databases is considered a weakness because it implies wasted storage space. Why store any more data than you need to? Additionally, if data occurs in multiple instances, any updates to that data would have to occur in all of those instances. For example, if the location for course `WRIT 101` were to change to `SSMS 1303`, we would have to update our data on four occasions (three times in `course_enrollments` and once in `courses`).
 
-**Relational databases aim to store data in a way that minimizes wasted storage while maintaining accessibility of that data.** It helps to adopt the terminology associated with relational databases, some of which we've already encountered. In dealing with relational databases, rows of a table are referred to as **records** or **tuples** and columns as **attributes** or **fields**. Additionally, tables are called **relations**, as a table communicates the relationships between each record and attribute.
+**Relational databases aim to store data in a way that minimizes wasted storage while maintaining accessibility of that data.** To understand how, it helps to adopt the terminology associated with relational databases, some of which we've already encountered. In dealing with relational databases, rows of a table are referred to as **records** or **tuples** and columns as **attributes** or **fields**. Additionally, tables are called **relations**, as a table communicates the relationships between each record and attribute.
 
 ![](img/reldb_term1.png)
 
 In order to eliminate redundancy, each relation (table) in a relational database strictly represents a single type of entity. In our case, the table `course_enrollments` should represent instances of course enrollment and the table `courses` should represent courses. Our database violates this rule because the relation `course_enrollments` contains information about three entity types: course enrollments, courses, and students. Because an entity type should be represented by its own relation, it seems that we might want to introduce a third relation to represent students.
 
-The restriction that each relation must represent a single entity type might seem detrimental because it requires that we separate information about different entity types. In the case of the relation `course_enrollments`, we would lose any information about *which student* is signing up for *which classes* and are left only with fields `time_of_enrollment` and `grading_option`. However, this is not the case, relations in a relational database can remain linked through the use of *keys*. **Keys** are unique identifiers for each record in a relation and manifest in the form of an added column. They are then referenced in other tables to maintain any relational information. It is important to emphasize the uniqueness of keys, as the notion that any one key will never cooccur in the same relation is what empowers them to be used as identifiers (e.g., students need unique ID numbers to prevent one student from being mistaken for another).
+The restriction that each relation must represent a single entity type might seem detrimental because it requires that we separate information about different entity types. In the case of the relation `course_enrollments`, we would lose any information about *which student* is enrolling for *which classes* and are left only with fields `quarter`, `time_of_enrollment`, and `grading_option`. However, this is not the case, relations in a relational database can remain linked through the use of *keys*. **Keys** are unique identifiers for each record in a relation and manifest in the form of an added column. They are then referenced in other tables to maintain any relational information. It is important to emphasize the uniqueness of keys, as the notion that any one key will never occur more than once in the same relation is what empowers them to be used as identifiers (e.g., students need unique ID numbers to prevent one student from being mistaken for another).
 
 At this point, it's totally understandable if you still aren't clear on what a relational database is or why we should use them. This may be a case in which the best way to understand is through example, so we'll try to recreate our university database keeping in mind the discussed principals of relational databases. An improved version of our database might comprise the following tables:
 
@@ -102,7 +102,7 @@ studentID | name | major | year
 
 This newer database is indeed a relational database and conveys the same exact information as the previous database while adding some efficiency. To solidify an understanding of relational databases, let's review the numerous changes we've made.
 
-As discussed, we've added a relation to represent students, and each relation in the new database represents only one entity type. However, since we removed information about students and courses from the relation `course_enrollments`, we needed a way of maintaining the information of who enrolled in which course, and that's when keys come into play.
+As discussed, we've added a relation to represent students, and each relation in the new database represents only one entity type. As a result, our new database exhibits much less redundancy. However, since we removed information about students and courses from the relation `course_enrollments`, we needed a way of maintaining the information of who enrolled in which course, and that's when keys come into play.
 
 We introduced keys into our database by adding a column of unique identifiers to each of the relations `course_enrollments` and `students` (`courses` already had a uniquely identifying field, `courseID`). The identifiers `courseID` and `studentID` are then referenced in the relation `course_enrollments`, allowing us to maintain the information we didn't want to lose.
 
@@ -113,7 +113,10 @@ Our relational database provides the following benefits over its non-relational 
 
 In short, by introducing keys and referencing them instead of repeating information in other tables, we were able to make our database more easily maintainable and memory efficient.
 
-While the changes we've made to the database improve its overall efficiency, we did suffer losses in data accessibility. Whereas with the non-relational database, one could figure out the names of students enrolled in course `PSTAT 101` by examining only the table `course_enrollments`, the same cannot be said for the relational database. At best, without leaving the relation `course_enrollments`, one could only figure out that the student with `studentID == 1001` is enrolled for `PSTAT 101`. Thus, we'd have to examine the relation `students` to learn that it's Samantha who is enrolled for PSTAT 101. While this might seem difficult, it's exactly the sort of thing SQL was made for! Now that we understand the ideas behind relational databases
+While the changes we've made to the database improve its overall efficiency, we did suffer losses in data accessibility. Whereas with the non-relational database, one could figure out the names of students enrolled in course `PSTAT 101` by examining only the table `course_enrollments`, the same cannot be said for the relational database. At best, without leaving the relation `course_enrollments`, one could only figure out that the student with `studentID == 1001` is enrolled for `PSTAT 101`. Thus, we'd have to examine the relation `students` to learn that it's Samantha who is enrolled for PSTAT 101. While this might seem difficult, it's exactly the sort of thing SQL was made for! Now that we understand the ideas behind relational databases, we can comfortably begin learning the fundamentals of SQL.
+
+
+## SQL
 
 ## Sources
 This curriculum has drawn heavily the following online resources:
