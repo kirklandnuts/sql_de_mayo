@@ -4,6 +4,21 @@ Data Science at UCSB, in conjunction with Actuarial Association, FACTOR (Female 
 ## Contents
 **[installation_and_setup](https://github.com/timothydnguyen/SQL_de_Mayo/tree/master/installation_and_setup)** covers the process of getting up and running with PostgreSQL and pgAdmin4. Participants install those tools, configure a local database, and load it with data to be used in the workshop.
 
+```{plain}
+COMPLETED: MacOS installation instructions  
+TODO: windows installation instructions, database setup instructions/scripts
+```
+
 **[beginner](https://github.com/timothydnguyen/SQL_de_Mayo/tree/master/beginner)** is focused on introducing participants to the concept of databases as well as the SQL syntax. Participants will learn about the properties of tabular data and relational databases. Additionally, this section covers fundamental SQL commands including SELECT statements, \_\_\_, and \_\_\_.
 
+```{plain}
+COMPLETED: section on understanding relational databases  
+TODO: fundamental SQL code (from SELECT to Aliases (right before JOINs))
+```
+
 **[intermediate](https://github.com/timothydnguyen/SQL_de_Mayo/tree/master/intermediate)** focuses on practically applying the concepts learned in the `beginner` session in various realistic scenarios.  This section starts with an introduction of more complex SQL concepts such as joins and \_\_\_.
+
+```{plain}
+COMPLETED:  
+TODO: section teaching JOINs, practice problems in 2 realistic database scenarios for practical application of SQL
+```
