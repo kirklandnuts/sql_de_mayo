@@ -1,4 +1,4 @@
-# SQL_de_Mayo
+# SQL de Mayo
 Data Science at UCSB, in conjunction with Actuarial Association, FACTOR (Female Actuarial Organization), and FAME (Financial Analysis and Management Education) is hosting a SQL workshop this quarter (SPRING 2018)! This repository contains the workshop material.
 
 ## Contents
