@@ -6,19 +6,23 @@ $ [COMMAND]
 ```
 the command `[COMMAND]` should be entered into a linux shell, which can be accessed through a program such as `Terminal` (preinstalled on MacOS).
 
+## Contents
+- [Installing PostgreSQL](#installing-postgresql)
+- [Installing pgAdmin4](#installing-pgadmin4)
+
 
 
 ## Installing PostgreSQL
-### MacOS
+
 1. Get the Homebrew package manager by running the following command in your Terminal:
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-Then, upgrade with the following command
+3. Upgrade homebrew by running the following command:
 ```
 $ brew upgrade
 ```
-2. Install PostgreSQL with the following command:
+2. Install PostgreSQL by running the following command:
 ```
 $ brew install postgresql
 ```
@@ -26,11 +30,7 @@ $ brew install postgresql
 ```
 $ pg_ctl -D /usr/local/var/postgres start
 ```
-4. Check that you have installed PostgreSQL properly by checking the version number
-```
-$ postgres -V
-```
-You should see
+4. Check that you have installed PostgreSQL properly by checking the version number with the command `$ postgres -V`. You should see the following output.
 ```
 $ postgres -V
 postgres (PostgreSQL) 10.3
@@ -40,7 +40,7 @@ Congrats! You've successfully installed PostgreSQL on your computer!
 
 ## Installing pgAdmin4
 At this point, PostgreSQL should be running on your computer, but we still need a way to easily work with it. [pgAdmin4](https://www.pgadmin.org/) provides a graphical user interface (GUI) to do just that. Please follow these instructions to install it.
-### Macos
+
 1. Follow [this link](https://www.postgresql.org/ftp/pgadmin/pgadmin4/v3.0/macos/) and download the .dmg file named `pgadmin4-3.0.dmg`.
 2. Open the downloaded file and drag the pgAdmin4 icon into your `Applications` folder.
 
@@ -48,6 +48,7 @@ That's it! Launch the application and a browser window should open with pgAdmin 
 
 ![](img/pgAdmin_launch.png)
 
+# ------- STOP HERE --------
 
 ### Interactive Installer
 Follow [this link](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and download the **PostgreSQL 10.3** installer for your operating system.
