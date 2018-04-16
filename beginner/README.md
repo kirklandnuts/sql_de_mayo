@@ -38,8 +38,8 @@ With an understanding of tables and their properties, we can now begin to unders
 
 `course_enrollments`
 
-student name | major | year | courseID | professor | location | quarter | time_of_enrollment | grading_option
---- | --- | --- | --- | --- | --- | --- | ---
+student_name | major | year | courseID | professor | location | quarter | time_of_enrollment | grading_option
+--- | --- | --- | --- | --- | --- | --- | --- | ---
 Samantha | Statistics | 4 | PSTAT 101 | T. Bayes | PSYCH 1924 | SPRING | 2018-04-15T22:42:03+00:01 | letter grade
 Arthur | Computer Science | 3 | CS 101 | A. Lovelace | HFH 1901 | SPRING | 2018-04-12T22:42:10+23:32 | p/np
 Jonny | Communication | 3 | COMM 101 | M. King Jr. | CAMPBHALL | SPRING | 2018-04-13T22:42:07+23:43 | p/np
