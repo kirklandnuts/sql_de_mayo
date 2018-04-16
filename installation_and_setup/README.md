@@ -25,13 +25,22 @@ $ cd sql_de_mayo/installation_and_setup
 ```
 $ ./install_psql.sh
 ```
-4. Check that you have installed PostgreSQL properly by checking the version number with the command `$ postgres -V`. You should see the following output.
+4. Check that you have installed PostgreSQL properly by checking the version number with the following command:
+```
+$ postgres -V
+```
+You should see the following output:
 ```
 $ postgres -V
 postgres (PostgreSQL) 10.3
 ```
 
-Congrats! You've successfully installed PostgreSQL on your Mac!
+Congrats! You've successfully installed PostgreSQL and started a server for it on your Mac!
+
+At any point, if you wish to kill the server, enter the following command into your terminal:
+```
+$ pg_ctl stop -D /usr/local/var/postgres
+```
 
 
 
@@ -39,7 +48,7 @@ Congrats! You've successfully installed PostgreSQL on your Mac!
 At this point, PostgreSQL should be running on your computer, but we still need a way to easily work with it. [pgAdmin4](https://www.pgadmin.org/) provides a graphical user interface (GUI) to do just that. Please follow these instructions to install it.
 
 1. Follow [this link](https://www.postgresql.org/ftp/pgadmin/pgadmin4/v3.0/macos/) and download the .dmg file named `pgadmin4-3.0.dmg`.
-2. Open the downloaded file and drag the pgAdmin4 icon into your `Applications` folder.
+2. Open the downloaded file, `pgadmin4-3.0.dmg`, by double-clicking it and drag the pgAdmin4 icon into your `Applications` folder.
 
 That's it, you've installed pgAdmin4! Launch the application and a browser window should open with pgAdmin 4 loaded up. It should look something like this
 
@@ -50,7 +59,7 @@ Now, we need to add a server so pgAdmin knows where to look for data. To do so, 
 ```
 $ psql postgres
 ```
-You should be greeted by the psql prompt which looks like this:
+You should be greeted by the psql prompt, which looks like this:
 ```
 psql (10.3)
 Type "help" for help.
@@ -71,7 +80,7 @@ postgres=# \du
 3. Take note of the name listed for your configured user, we'll be entering it into pgAdmin.
 
 Now that we have our username, lets return to pgAdmin and add a server
-1. From the pgAdmin dashboard, click `Add New Server`. You should see a window pop up.
+1. From the pgAdmin dashboard, click `Add New Server`, and you should see a window pop up.
 2. In the popup window, you should be in the `General` tab. Here, you can enter any name for your server into the `name` field, but let's go with `sql_de_mayo` for simplicity's sake.
 3. At the top of the popup window, click `Connection` to switch to that tab. Here, enter `localhost` into the `Host name/address` field. Additionally, in the `Username` field, replace `postgres` with the username you found in the previous section. Before clicking `save`, your window should look as follows (with your username in place of `timmy`):
 ![](img/connection_parameters.png)
