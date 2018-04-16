@@ -1,12 +1,13 @@
 # Introduction to SQL
 
 ## Contents
-- [Background](## Background)
-- [Databases and Tables](## Databases and Tables)
-    - [Tables](### Tables)
-    - [Databases](### Databases)
-        - [Relational Databases](#### Relational Databases)
-- [Sources](## Sources)
+- [Background](#background)
+- [Databases and Tables](#databases-and-tables)
+	- [Tables](#tables)
+	- [Databases](#databases)
+		- [Relational Databases](#relational-databases)
+- [Sources](#sources)
+
 
 ## Background
 **SQL** stands for *Structured Query Language* and is a standard language for storing, manipulating, and retrieving data in databases. [SQL comes in a variety of flavors](https://stackoverflow.com/questions/1326318/difference-between-different-types-of-sql), and for this workshop, we will be working with [PostgreSQL](https://www.postgresql.org/) due to its popularity in industry and open source nature.
@@ -61,7 +62,18 @@ In this example, the tables `course_enrollment`, and `courses` indeed constitute
 
 #### Relational Databases
 A *relational database* is a database which is organized based on the principals of the [relational model](https://en.wikipedia.org/wiki/Relational_model). This paradigm has found great success in practice, as most databases are structured relationally. To understand what relational database are and the benefits they provide, we will begin with a critique of the database presented in the previous section.
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [Introduction to SQL](#introduction-to-sql)
+	- [Contents](#contents)
+	- [Background](#background)
+	- [Databases and Tables](#databases-and-tables)
+		- [Tables](#tables)
+		- [Databases](#databases)
+			- [Relational Databases](#relational-databases)
+	- [Sources](#sources)
+
+<!-- /TOC -->
 A weakness of the database is redundancy; there are multiple cases where data is unnecessarily repeated. In the table `course_enrollment`, each student's name, major, and year are stored twice because they each enrolled in two courses. Furthermore, in the same table, data about the course `WRIT 101`'s location and professor occurs multiple times. Not only is data repeated within the table `course_enrollment`, but also across different tables. Data regarding each course's professor and location is stored in both tables. Redundancy in databases is considered a weakness because it results in wasted storage space. Why store any more data than you need to? Additionally, if data occurs in multiple locations, any updates to that data will have to be made in all locations. For example, if the location for course `WRIT 101` were to change to `SSMS 1303`, we would have to update our data on four occasions (three times in `course_enrollment` and once in `courses`).
 
 **Relational databases aim to store data in a way that minimizes wasted storage while maintaining ease of access of that data.** It helps to adopt the terminology associated with relational databases, some of which we've already encountered. In dealing with relational databases, rows of a table are referred to as *records* or *tuples* and columns as *attributes* or *fields*. Additionally, tables are called *relations*, as a table communicates the relationships between each record and attribute.
