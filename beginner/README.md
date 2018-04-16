@@ -22,7 +22,7 @@ Data is commonly stored in tables, but in the context of relational databases, t
 
 name | major | favorite food
 --- | --- | ---
-Samantha | Statistics | sushi
+Samantha | Statistics | noodles
 Arthur | Computer Science | hamburgers
 Jonny | Communication | lobster rolls
 
@@ -117,6 +117,9 @@ While the changes we've made to the database improve its overall efficiency, we 
 
 
 ## SQL
+
+###
+
 
 ## Sources
 This curriculum has drawn heavily the following online resources:
