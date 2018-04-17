@@ -122,7 +122,7 @@ For our exercises, we will be using the Northwind Database. This database is abo
 
 The diagram shows the table structure of the Northwind database.
 
-![]
+![](https://github.com/timothydnguyen/sql_de_mayo/blob/samantha/beginner/img/northwind_schema.png)
 
 
 ###
