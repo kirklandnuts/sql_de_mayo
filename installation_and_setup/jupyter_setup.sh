@@ -1,4 +1,11 @@
 cd ..;
+pip3 install virtualenv;
 virtualenv -p python3 venv;
 source venv/bin/activate;
+git clone https://github.com/bgschiller/postgres_kernel;
+cd postgres_kernel;
+python setup.py build;
+python setup.py install;
+cd ..;
+rm -rf postgres_kernel;
 pip install -r requirements.txt;

@@ -1,0 +1,6 @@
+inside init
+starting connection
+failed to connect to 
+starting connection
+fetching all from: 
+SELECT * from customers
