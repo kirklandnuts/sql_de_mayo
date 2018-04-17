@@ -118,6 +118,13 @@ While the changes we've made to the database improve its overall efficiency, we 
 
 ## SQL
 
+For our exercises, we will be using the Northwind Database. This database is about a company named "Northwind Traders" and captures all the sales transactions that occur between the company and the customers, as well as the purchase transactions between Northwind and its suppliers.
+
+The diagram shows the table structure of the Northwind database.
+
+![]
+
+
 ###
 
 
