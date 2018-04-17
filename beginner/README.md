@@ -134,7 +134,7 @@ SQL keywords are NOT case sensitive; select is the same as SELECT. We will write
 
 A semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server. In this tutorial, we will use semicolon at the end of each SQL statement.
 
-#### Select Statements
+### Select Statements
 
 The SELECT statement is used to select data from a database. The data returned is stored in a result table, called the result-set.
 
