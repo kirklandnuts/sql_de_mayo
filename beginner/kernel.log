@@ -10,3 +10,147 @@ failed to connect to
 starting connection
 fetching all from: 
 SELECT * FROM Customers;
+inside init
+starting connection
+failed to connect to 
+starting connection
+fetching all from: 
+SELECT * FROM Customers;
+fetching all from: 
+`SELECT CompanyName, Address FROM Customers;`
+
+`SELECT * FROM Customers;`
+fetching all from: 
+SELECT CompanyName, Address FROM Customers;
+
+SELECT * FROM Customers;
+fetching all from: 
+SELECT * FROM Customers;
+fetching all from: 
+SELECT Country FROM Customers;
+fetching all from: 
+SELECT DISTINCT Country FROM Customers;
+fetching all from: 
+SELECT * FROM Customers 
+WHERE Country = 'Mexico';
+fetching all from: 
+SELECT * FROM Customers
+WHERE CustomerID = 1;
+fetching all from: 
+SELECT * FROM Customers
+WHERE customerid = 1;
+fetching all from: 
+SELECT * FROM Customers
+WHERE Postalcode = 05021;
+fetching all from: 
+SELECT * FROM Customers
+WHERE Postalcode = 05021;
+fetching all from: 
+SELECT * FROM Customers
+WHERE Postalcode = '05021';
+fetching all from: 
+SELECT * FROM Customers
+WHERE Postalcode BETWEEN '05021' AND '05030';
+fetching all from: 
+SELECT companyname, contactname 
+FROM Customers
+WHERE NOT country = 'Mexico';
+fetching all from: 
+SELECT companyname, contactname, country
+FROM Customers
+WHERE NOT country = 'Mexico';
+fetching all from: 
+### Order By Keyword
+
+The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+
+The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
+fetching all from: 
+SELECT * FROM Customers
+ORDER BY Country ASC;
+fetching all from: 
+SELECT DISCTINT * FROM Customers
+ORDER BY Country ASC;
+fetching all from: 
+SELECT DISTINCT * FROM Customers
+ORDER BY Country ASC;
+fetching all from: 
+SELECT * FROM Customers
+ORDER BY City ASC, Country DESC;
+fetching all from: 
+SELECT * FROM Employees
+fetching all from: 
+SELECT * FROM Employees;
+fetching all from: 
+SELECT birthdate, address, city, homephone FROM Employees
+WHERE City = 'Seattle' AND Region = 'WA';
+fetching all from: 
+SELECT birthdate, address, city, homephone FROM Employees
+WHERE City = 'Seattle' AND Region = 'WA'
+ORDER BY DESC;
+fetching all from: 
+SELECT DISTINCT * FROM Customers 
+WHERE City = 'Helsinki' 
+ORDER BY Country ASC;
+fetching all from: 
+SELECT * FROM Customers 
+WHERE City = 'Helsinki' 
+ORDER BY Country ASC;
+fetching all from: 
+SELECT * FROM Customers 
+ORDER BY Country ASC;
+fetching all from: 
+SELECT DISTINCT * FROM Customers 
+WHERE CITY = 'SAN PAULO';
+fetching all from: 
+SELECT DISTINCT * FROM Customers 
+WHERE CITY = 'SAN PAULO';
+fetching all from: 
+SELECT * FROM Customers 
+WHERE CITY = 'SAN PAULO';
+fetching all from: 
+SELECT * FROM Customers 
+WHERE CITY = 'SAN PAULO';
+fetching all from: 
+SELECT * FROM Customers 
+WHERE CITY = 'San Paulo';
+fetching all from: 
+SELECT * FROM Customers 
+WHERE City = 'San Paulo';
+fetching all from: 
+SELECT * FROM Customers ;
+fetching all from: 
+SELECT * FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT DISTINCT * FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT UNIQUE contacttitle FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT DISTINCT contacttitle FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT contacttitle FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT * FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT DISTINCT contactname, contacttitle FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT DISTINCT contactname, contacttitle FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT DISTINCT * FROM Customers 
+WHERE City = 'Sao Paulo';
+fetching all from: 
+SELECT DISTINCT * FROM Customers 
+WHERE City = 'Sao Paulo'
+ORDER BY Country ASC;
+fetching all from: 
+SELECT birthdate, address, city, homephone FROM Employees
+WHERE City = 'Seattle' AND Region = 'WA'
+ORDER BY postalcode DESC;
