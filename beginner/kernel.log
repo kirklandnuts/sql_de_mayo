@@ -154,3 +154,21 @@ fetching all from:
 SELECT birthdate, address, city, homephone FROM Employees
 WHERE City = 'Seattle' AND Region = 'WA'
 ORDER BY postalcode DESC;
+inside init
+starting connection
+failed to connect to 
+inside init
+starting connection
+failed to connect to 
+starting connection
+fetching all from: 
+SELECT * FROM Customers;
+fetching all from: 
+SELECT birthdate, address, city, homephone FROM Employees
+WHERE City = 'Seattle' AND Region = 'WA'
+ORDER BY postalcode DESC;
+starting connection
+fetching all from: 
+SELECT companyname, contacttitle, address, region
+FROM Customers
+WHERE Country != 'Italy';
