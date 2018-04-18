@@ -185,3 +185,6 @@ fetching all from:
 SELECT COUNT(*)
 FROM Employees 
 WHERE City = 'London';
+inside init
+starting connection
+failed to connect to 

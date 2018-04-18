@@ -115,7 +115,14 @@ In short, by introducing keys and referencing them instead of repeating informat
 
 While the changes we've made to the database improve its overall efficiency, we did suffer losses in data accessibility. Whereas with the non-relational database, one could figure out the names of students enrolled in course `PSTAT 101` by examining only the table `course_enrollments`, the same cannot be said for the relational database. At best, without leaving the relation `course_enrollments`, one could only figure out that the student with `studentID == 1001` is enrolled for `PSTAT 101`. Thus, we'd have to examine the relation `students` to learn that it's Samantha who is enrolled for PSTAT 101. While this might seem difficult, it's exactly the sort of thing SQL was made for! Now that we understand the ideas behind relational databases, we can comfortably begin learning the fundamentals of SQL.
 
-Now let's move onto the tutorial! Open up your terminal and navigate to the `sql_de_mayo` folder. Type `jupyter notebook beginner\beginner_notebook.ipynb` to begin.  
+Now let's move onto the tutorial! Open up your terminal and navigate to the `sql_de_mayo` folder.
+
+Type
+```
+$ cd sql_de_mayo
+$ jupyter notebook beginner\beginner_notebook.ipynb
+```
+to begin.  
 
 
 ## Sources
