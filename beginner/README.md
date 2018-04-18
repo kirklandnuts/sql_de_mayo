@@ -117,13 +117,12 @@ While the changes we've made to the database improve its overall efficiency, we 
 
 Now let's move onto the tutorial! Open up your terminal and navigate to the `sql_de_mayo` folder.
 
-Type
+To begin, type:
+
 ```
 $ cd sql_de_mayo
 $ jupyter notebook beginner\beginner_notebook.ipynb
 ```
-to begin.  
-
 
 ## Sources
 This curriculum has drawn heavily the following online resources:
