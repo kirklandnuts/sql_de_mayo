@@ -205,3 +205,6 @@ SELECT *
 FROM Order_Details AS Details
 WHERE Details.productid = 11
 LIMIT 2;
+inside init
+starting connection
+failed to connect to 
