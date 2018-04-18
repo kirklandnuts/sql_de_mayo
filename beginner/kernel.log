@@ -172,3 +172,16 @@ fetching all from:
 SELECT companyname, contacttitle, address, region
 FROM Customers
 WHERE Country != 'Italy';
+inside init
+starting connection
+failed to connect to 
+starting connection
+fetching all from: 
+# BEGINNER TUTORIAL
+fetching all from: 
+SELECT AVG(UnitPrice) 
+FROM Order_Details;
+fetching all from: 
+SELECT COUNT(*)
+FROM Employees 
+WHERE City = 'London';
