@@ -115,50 +115,7 @@ In short, by introducing keys and referencing them instead of repeating informat
 
 While the changes we've made to the database improve its overall efficiency, we did suffer losses in data accessibility. Whereas with the non-relational database, one could figure out the names of students enrolled in course `PSTAT 101` by examining only the table `course_enrollments`, the same cannot be said for the relational database. At best, without leaving the relation `course_enrollments`, one could only figure out that the student with `studentID == 1001` is enrolled for `PSTAT 101`. Thus, we'd have to examine the relation `students` to learn that it's Samantha who is enrolled for PSTAT 101. While this might seem difficult, it's exactly the sort of thing SQL was made for! Now that we understand the ideas behind relational databases, we can comfortably begin learning the fundamentals of SQL.
 
-
-## SQL
-
-For our exercises, we will be using the Northwind Database. This database is about a company named "Northwind Traders" and captures all the sales transactions that occur between the company and the customers, as well as the purchase transactions between Northwind and its suppliers.
-
-The diagram shows the table structure of the Northwind database.
-
-![](https://github.com/timothydnguyen/sql_de_mayo/blob/samantha/beginner/img/northwind_schema.png)
-
-There are additional tables, but we will only be using the ones shown above in this tutorial.
-
-Most of the actions you need to perform on a database are down with SQL statements. The following statement selects all the records in the "Customers" table.
-
-`SELECT * FROM Customers;`
-
-SQL keywords are NOT case sensitive; select is the same as SELECT. We will write all SQL keywords in uppercase.
-
-A semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server. In this tutorial, we will use semicolon at the end of each SQL statement.
-
-### Select Statements
-
-The SELECT statement is used to select data from a database. The data returned is stored in a result table, called the result-set.
-
-Try out the following SQL statements to see what columns you select from the "Customers" table.
-
-`SELECT CompanyName, Address FROM Customers;`
-
-`SELECT * FROM Customers;`
-
-Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values. The SELECT DISTINCT statement is used to return only unique values.
-
-What is the difference between the two statements below?
-
-`SELECT Country FROM Customers;`
-
-`SELECT DISTINCT Country FROM Customers;`
-
-#### Where Clause
-
-The WHERE clause is used to filter records.
-
-The WHERE clause is used to extract only those records that fulfill a specified condition.
-
-###
+Now let's move onto the tutorial! Open up your terminal and navigate to the `sql_de_mayo` folder. Type `jupyter notebook beginner\beginner_notebook.ipynb` to begin.  
 
 
 ## Sources
