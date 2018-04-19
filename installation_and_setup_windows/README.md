@@ -16,7 +16,6 @@ the command `[COMMAND]` should be entered into a command prompt, which is native
 ## Contents
 - [Installing PostgreSQL](#installing-postgresql)
 - [Installing PostgreSQL Kernel](#installing-psql-kernel)
-- [Installing pgAdmin4](#installing-pgadmin4)
 
 ## Installing PostgreSQL
 
