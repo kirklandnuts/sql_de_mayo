@@ -24,7 +24,10 @@ hc_18 | Holly | Financial Analyst
 dr_16 | Daniel | Actuarial Analyst
 lm_20 | Leslie | Consultant
 
-To compute the company of Daniel the Actuarial Analyst, we have to use information in both tables. We can join the tables on the employee_id column, creating a new table with both company name and position.
+To compute the company of Daniel the Actuarial Analyst, we have to use information in both tables. We can join the tables on the employee_id column, creating a new table with both company name and position. In this section we'll work together to explore all the different joins that exist in SQL.
 
-## Joins
-A join combines tables by matching values in their columns. There are four main types of joins: inner joins, outer joins, left joins, and right joins. We will be exploring how each of the joins combines tables.  
+Open up the intermediate notebook by typing into your terminal:
+
+```
+$ jupyter notebook intermediate\intermediate_notebook.ipynb
+```
