@@ -412,3 +412,6 @@ select products.unitsinstock
 where products.categoryid BETWEEN 5 and 7
 order by products.categoryid desc
 limit 3;
+inside init
+starting connection
+failed to connect to 
