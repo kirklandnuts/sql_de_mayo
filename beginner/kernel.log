@@ -208,3 +208,207 @@ LIMIT 2;
 inside init
 starting connection
 failed to connect to 
+inside init
+starting connection
+failed to connect to 
+inside init
+starting connection
+failed to connect to 
+starting connection
+starting connection
+starting connection
+fetching all from: 
+SELECT CompanyName, Address FROM Customers;
+fetching all from: 
+SELECT * FROM Customers;
+fetching all from: 
+SELECT Country FROM Customers;
+fetching all from: 
+SELECT DISTINCT Country FROM Customers;
+fetching all from: 
+SELECT * FROM Customers 
+WHERE Country = 'Mexico';
+fetching all from: 
+SELECT * FROM Customers
+WHERE Postalcode BETWEEN '05021' AND '05030';
+fetching all from: 
+SELECT companyname, contactname, country
+FROM Customers
+WHERE NOT country = 'Mexico';
+fetching all from: 
+SELECT DISTINCT * FROM Customers
+ORDER BY Country ASC;
+fetching all from: 
+SELECT * FROM Customers
+ORDER BY City ASC, Country DESC;
+fetching all from: 
+SELECT companyname, contacttitle,address, region
+FROM Customers
+NOT country = 'Italy';
+fetching all from: 
+SELECT companyname, contacttitle,address, region
+FROM Customers
+WHERE NOT country = 'Italy';
+fetching all from: 
+SELECT DISTINCT * FROM Customers
+WHERE city = 'San Paulo' ASC;
+fetching all from: 
+SELECT DISTINCT * FROM Customers
+WHERE city = 'San Paulo'
+ORDER BY ASC;
+fetching all from: 
+SELECT DISTINCT * FROM Customers
+WHERE city = 'San Paulo'
+ORDER BY Country asc;
+fetching all from: 
+SELECT DISTINCT * FROM Customers
+WHERE city = 'San Paulo'
+ORDER BY Country asc;
+fetching all from: 
+SELECT * FROM Customers
+WHERE city = 'San Paulo'
+ORDER BY Country asc;
+fetching all from: 
+SELECT * FROM Customers
+WHERE city = 'San Paulo';
+fetching all from: 
+SELECT * FROM Customers
+WHERE city = 'Sao Paulo';
+fetching all from: 
+SELECT * FROM Customers
+WHERE city = 'Sao Paulo'
+ORDER BY Country asc;
+fetching all from: 
+SELECT birthdate, address, city, phone
+FROM Employees
+WHERE city = 'Seattle'
+OrDeR bY postalcode desc;
+fetching all from: 
+SELECT birthdate, address, city, phone
+FROM Employees
+WHERE city = 'Seattle', region = 'Washington'
+OrDeR bY postalcode desc;
+fetching all from: 
+SELECT birthdate, address, city, phone
+FROM Employees
+WHERE city = 'Seattle' AND region = 'Washington'
+OrDeR bY postalcode desc;
+fetching all from: 
+SELECT birthdate, address, city, HomePhone
+FROM Employees
+WHERE city = 'Seattle' AND region = 'Washington'
+OrDeR bY postalcode desc;
+fetching all from: 
+SELECT birthdate, address, city, HomePhone
+FROM Employees
+WHERE city = 'Seattle' AND region = 'Washington'
+ORDER BY postalcode desc;
+fetching all from: 
+SELECT * FROM Employees;
+fetching all from: 
+SELECT birthdate, address, city, homephone
+FROM Employees
+WHERE city = 'Seattle' AND region = 'WA'
+ORDER BY postalcode desc;
+fetching all from: 
+SELECT AVG(UnitPrice) 
+FROM Order_Details;
+fetching all from: 
+SELECT DISTINCT CustomerID, shipname 
+FROM Orders
+ORDER BY CustomerID
+LIMIT 3;
+fetching all from: 
+SELECT SUM FROM Employees;
+fetching all from: 
+SELECT SUM 
+FROM Employees;
+fetching all from: 
+SELECT Count 
+FROM Employees;
+fetching all from: 
+Count 
+FROM Employees;
+fetching all from: 
+Count FROM Employees;
+fetching all from: 
+SELECT * FROM employees;
+fetching all from: 
+SELECT COUNT
+FROM employees
+WHERE city = 'London';
+fetching all from: 
+SELECT *
+FROM employees
+WHERE city = 'London';
+fetching all from: 
+SELECT COUNT
+FROM employees
+WHERE city = 'London';
+fetching all from: 
+SELECT COUNT(*)
+FROM employees
+WHERE city = 'London';
+fetching all from: 
+SELECT firstname, lastname, address
+FROM employees
+LIMIT 10;
+fetching all from: 
+SELECT firstname, lastname, address
+FROM employees
+ORDER BY lastname
+LIMIT 10;
+fetching all from: 
+SELECT * 
+FROM Products
+WHERE productname LIKE '%Sir Rodney%';
+fetching all from: 
+SELECT * 
+FROM Products
+WHERE productname LIKE 'S%';
+fetching all from: 
+SELECT * 
+FROM Products
+WHERE productname LIKE 'L_%_%';
+fetching all from: 
+SELECT * FROM ORDERS;
+fetching all from: 
+SELECT COUNT(freight)
+FROM ORDERS
+WHERE orderid BETWEEN 10250 and 10400;
+fetching all from: 
+SELECT * FROM PRODUCTS;
+fetching all from: 
+SELECT supplierid, categoryid, productname
+FROM Products
+WHERE productname LIKE 'Qu_%_%'
+
+fetching all from: 
+Select * from products;
+fetching all from: 
+select unitsinstock
+from products
+where categoryid BETWEEN 5 and 7 asc
+limit 3;
+fetching all from: 
+select unitsinstock
+from products
+where categoryid BETWEEN 5 and 7
+limit 3
+order by categoryid desc;
+fetching all from: 
+select unitsinstock
+from products
+where categoryid BETWEEN 5 and 7
+order by categoryid desc
+limit 3;
+fetching all from: 
+select unitsinstock
+where products.categoryid BETWEEN 5 and 7
+order by products.categoryid desc
+limit 3;
+fetching all from: 
+select products.unitsinstock
+where products.categoryid BETWEEN 5 and 7
+order by products.categoryid desc
+limit 3;
