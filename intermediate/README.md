@@ -7,7 +7,9 @@
 
 # Background
 
-In this section, we introduce SQL joins. SQL joins are used to combine multiple tables in a relational database.
+One of the biggest issues beginning SQL writers have is being able to write queries that use more than one table, which can be solved with a join. In this section, we are going to show you how to write a query that combines, or joins, data from more than one table. Once you have gone through the examples you will understand how to write the basic commands to make this happen and why data is separated in the first place.
+
+![](https://github.com/timothydnguyen/sql_de_mayo/blob/master/intermediate/img/all_joins_visual.png)
 
 Suppose we have a database for all the companies in Santa Barbara. We have two different tables: companies and positions. The names table contains the columns company_name, and employee_id, a unique number assigned to each employee. The employee table contains the columns employee_id, name, and the position.
 
@@ -32,8 +34,6 @@ dr_16 | Daniel | Actuarial Analyst
 lm_20 | Leslie | Consultant
 
 To compute the company of Daniel the Actuarial Analyst, we have to use information in both tables. We can merge the tables on the employee_id column, creating a new table with both company name and position. To do so, we'll need to use a SQL join. In this section we'll work together to explore all the different joins that exist in SQL.
-
-![](https://github.com/timothydnguyen/sql_de_mayo/blob/master/intermediate/img/all_joins_visual.png)
 
 To start, open up the intermediate notebook by typing into your terminal:
 
