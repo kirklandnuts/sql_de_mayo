@@ -73,8 +73,6 @@ $ ./jupyter_setup.sh
 
 That's it. Congratulations, you should be set up now!
 
-## Checking
-
 
 
 
