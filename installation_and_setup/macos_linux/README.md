@@ -8,7 +8,8 @@ the command `[COMMAND]` should be entered into a linux shell, which can be acces
 
 ## Contents
 - [Installing PostgreSQL](#installing-postgresql)
-- [Installing pgAdmin4](#installing-pgadmin4)
+- [Loading Data into Databases](#loading-data-into-databases)
+- [Configuring Jupyter Notebook to run PostgreSQL](#configuring-jupyter-notebook-to-run-postgresql)
 
 ## Installing PostgreSQL
 We've compiled the commands needed to install PostgreSQL into a single shell script. The program is installed through a popular package manager called Homebrew. Please follow these instructions to run the installation script:
@@ -43,6 +44,45 @@ $ pg_ctl stop -D /usr/local/var/postgres
 ```
 
 
+## Loading Data into Databases
+We will load a couple data sets into our PostgreSQL server to be accessible as databases.
+
+### Northwind
+The Northwind database contains the sales data for a fictitious company called Northwind Traders, which imports and exports specialty foods from around the world. We will be using [code written by Github user *pthom*](https://github.com/pthom/northwind_psql.git) to quickly set up this database. Follow these instructions to run the code.
+
+1. In your terminal, navigate within the previously cloned repository (`sql_de_mayo`) to the directory containing the northwind database setup script. Assuming you haven't touched your terminal since the last set of terminal instructions, the command to do so should be as follows:
+```
+$ cd db_setup
+```
+2. From here, simply run the script to instantiate the Northwind database with the following command:
+```
+$ ./create_db.sh
+```
+
+## Configuring Jupyter Notebook to run PostgreSQL
+We'll be using [Jupyter Notebooks](http://jupyter.org/) to write our SQL queries. Once set up, Jupyter notebooks are very interactive and easy to use, making them a good choice for learning. Notebooks typically set up to work with Python code, but we've written a script to configure them to run on a [PostgreSQL kernel](https://github.com/bgschiller/postgres_kernel).
+
+1. In your terminal, navigate back to `sql_de_mayo`. If you haven't done anything since the previous set of instructions, the command should be as follows:
+```
+$ cd ..
+```
+2. Then, run the jupyter setup script with the following command:
+```
+$ ./jupyter_setup.sh
+```
+
+That's it. Congratulations, you should be set up now!
+
+## Checking
+
+
+
+
+
+
+
+
+# ------- STOP HERE (DEPRECATED) --------
 
 ## Installing pgAdmin4
 At this point, PostgreSQL should be running on your computer, but we still need a way to easily work with it. [pgAdmin4](https://www.pgadmin.org/) provides a graphical user interface (GUI) to do just that. Please follow these instructions to install it.
@@ -87,20 +127,6 @@ Now that we have our username, lets return to pgAdmin and add a server
 
 Once you click `save` and the server is added, you should see `sql_de_mayo` (or whatever server name you chose) listed under `Servers` in the Browser pane on the left of the pgAdmin window. At this point your local server is configured with pgAdmin, but it contains no data, so let's load some in!
 
-## Loading Data into Databases
-We will load a couple data sets into our PostgreSQL server to be accessible as databases.
-
-### Northwind
-The Northwind database contains the sales data for a fictitious company called Northwind Traders, which imports and exports specialty foods from around the world. We will be using [code written by Github user *pthom*](https://github.com/pthom/northwind_psql.git) to quickly set up this database. Follow these instructions to run the code.
-
-1. In your terminal, navigate within the previously cloned repository to the directory containing the northwind database setup script. Assuming you haven't touched your terminal since the last set of terminal instructions, the command to do so should be as follows:
-```
-$ cd db_setup
-```
-2. From here, simply run the script to instantiate the Northwind database with the following command:
-```
-$ ./create_db.sh
-```
 
 
 
@@ -112,14 +138,6 @@ $ ./create_db.sh
 
 
 
-
-
-
-
-
-
-
-# ------- STOP HERE (DEPRECATED) --------
 
 ### old mac install
 1. Get the Homebrew package manager by running the following command in your Terminal:
