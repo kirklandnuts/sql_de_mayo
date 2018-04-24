@@ -20,7 +20,7 @@ $ git clone https://github.com/timothydnguyen/sql_de_mayo
 ```
 2. Navigate within the cloned repository to the directory containing the installation script using the following command:
 ```
-$ cd sql_de_mayo/installation_and_setup
+$ cd sql_de_mayo/installation_and_setup/macos_linux
 ```
 3. Execute the script with the following command:
 ```
