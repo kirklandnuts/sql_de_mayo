@@ -70,11 +70,11 @@ We've compiled the commands needed to run `PostgreSQL` within a `jupyter noteboo
 ```
 2. Navigate within the cloned repository to the directory containing the installation script using the following command:
 ```
-> cd sql_de_mayo/installation_and_setup_windows
+> cd sql_de_mayo/installation_and_setup/windows
 ```
 3. Execute the script with the following command:
 ```
-> install_psql.bat
+> jupyter_setup.bat
 ```
 
 4. You can utilize by entering the following commands to open a jupyter notebook inside your virtualenv.
