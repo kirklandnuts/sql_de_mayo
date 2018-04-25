@@ -1,8 +1,11 @@
-# Working with Joins
+# Intermediate Tutorial
 
 ## Contents
-- [Background](#background)
-- [Combining Data](#combining-data)
+- [Background on Joins](#background)
+  - [Combining Data](#combining-data)
+- [Creating Databases](#creating-databases)
+  - [Data Modeling](#data-modeling)
+  - [Types of Database Models](#types-of-database-models)
 - [Sources](#sources)
 
 
@@ -17,7 +20,7 @@ When databases are developed, care is taken to ensure redundant data is minimize
 That is exactly why we need joins.
 
 
-# Combining Data
+## Combining Data
 
 Suppose we have a database for all the companies in Santa Barbara. We have two different tables: companies and positions. The names table contains the columns `company_name`, and `employee_id`, a unique number assigned to each employee. The employee table contains the columns `employee_id`, `name`, and `position`.
 
@@ -45,7 +48,46 @@ To compute the company of Daniel the Actuarial Analyst, we have to use informati
 
 In this section we'll work together to explore all the different joins that exist in SQL.
 
-To start, open up the intermediate notebook by typing into your terminal:
+# Creating Databases
+
+The second part of the intermediate tutorial focuses on creating databases. If you are applying for a career involving databases – whether you want to be an engineer, an administrator, or a warehousing professional – you will need to show off your knowledge of both database lingo and function. Just as important as navigating databases is knowing how to create and organize them; having a strong understanding of schemas and tables will help you nail that interview and land the job!
+
+## Data Modeling
+
+Data modeling is the diagram representation showing how the entities are related to each other. Generally, the data models are created in data analysis & design phase of software development life cycle. It is the initial step towards database design. We first create the conceptual model, then logical model and finally move to the physical model. The level of complexity and detail increases from conceptual to logical to a physical data model.
+
+**The conceptual model** shows a very basic high level of design while the physical data model shows a very detailed view of design. The conceptual model will be just portraying entity names and entity relationships.
+
+**The logical model** will be showing up entity names, entity relationships, attributes, primary keys and foreign keys in each entity.
+
+**The physical data model** will be showing primary keys, foreign keys, table names, column names and column data types. This view actually elaborates how the model will be actually implemented in the database.
+
+The image below breaks down the pipeline.
+
+![](img/data_modeling.png)
+
+## Types of Database Models
+There are many kinds of data models. Some of the most common ones include:
+
+- Hierarchical database model
+- Relational model
+- Network model
+- Object-oriented database model
+- Entity-relationship model
+- Document model
+- Entity-attribute-value model
+- Star schema
+- The object-relational model, which combines the two that make up its name
+
+The biggest factor is whether the database management system you are using supports a particular model. Most database management systems are built with a particular data model in mind and require their users to adopt that model, although some do support multiple models.
+
+In addition, different models apply to different stages of the database design process. High-level conceptual data models are best for mapping out relationships between data in ways that people perceive that data. Record-based logical models, on the other hand, more closely reflect ways that the data is stored on the server.
+
+Selecting a data model is also a matter of aligning your priorities for the database with the strengths of a particular model, whether those priorities include speed, cost reduction, usability, or something else.
+
+In this section, we'll work on creating our own database to work with. This will come in handy when we don't have another person's schema to test our queries with!
+
+Now that you have a little bit of background, let's begin! To start, open up the intermediate notebook by typing into your terminal:
 
 ```
 $ jupyter notebook intermediate\intermediate_notebook.ipynb
