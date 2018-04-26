@@ -21,9 +21,6 @@ the command `[COMMAND]` should be entered into a command prompt, which is native
 
 This section is heavily drawn from PostgrSQLTutorial's [Installing PostgreSQL walkthrough](http://www.postgresqltutorial.com/install-postgresql/).
 
-### Creating User
-For the windows download to be successful, you will need to create a new user for this example we will call it *timmy* which you will need to allow admin access to be able to download and install PostgreSQL. More information [here](https://support.microsoft.com/en-us/help/4026923/windows-create-a-local-user-or-administrator-account-in-windows-10)
-
 
 Go to PostgreSQL's [installer](https://www.postgresql.org/download/windows/) page and choose the appropriate bundle depending on whether your computer is 32 or 64 bit.
 
@@ -56,7 +53,7 @@ The Northwind database contains the sales data for a fictitious company called N
 First use the `window` button to search *psql*, upon opening the application you should be prompted with a terminal asking for credentials. 
 
 
-You can press enter since leaving the repsonses blank default to the values inside the [], which is the necessary credentials. You will need to enter your password, which is `postgres`. 
+You can press enter for all sections since leaving the repsonses blank default to the values inside the [], which the current credentials. Lastly, you will need to enter your password, which is `postgres`. 
 
 ```
 Server [localhost]:
@@ -135,6 +132,11 @@ Upon entering this you should be able to create both python and PostgreSQL kerne
 
 
 # ------- STOP HERE (DEPRECATED) --------
+
+
+### Creating User
+For the windows download to be successful, you will need to create a new user for this example we will call it *timmy* which you will need to allow admin access to be able to download and install PostgreSQL. More information [here](https://support.microsoft.com/en-us/help/4026923/windows-create-a-local-user-or-administrator-account-in-windows-10)
+
 
 
 ## Running pgAdmin4
