@@ -43,28 +43,21 @@ Choose the default locale for PostgreSQL, and you should be done with the instal
 
 ## Loading Data into Databases
 
-We will load a couple data sets into our PostgreSQL server to be accessible as databases. 
+We will load a couple data sets into our PostgreSQL server to be accessible as databases.
 
 
 ### Northwind
 
-The Northwind database contains the sales data for a fictitious company called Northwind Traders, which imports and exports specialty foods from around the world. We will be utilizing `psql`, the terminal installed with PostgreSQL. 
+The Northwind database contains the sales data for a fictitious company called Northwind Traders, which imports and exports specialty foods from around the world. We will be utilizing `psql`, the terminal installed with PostgreSQL.
 
-First use the `window` button to search *psql*, upon opening the application you should be prompted with a terminal asking for credentials. 
+First use the `window` button to search *psql*, upon opening the application you should be prompted with a terminal asking for credentials.
 
 
-You can press enter for all sections since leaving the repsonses blank default to the values inside the [], which the current credentials. Lastly, you will need to enter your password, which is `postgres`. 
+You can press enter for all sections since leaving the responses blank default to the values inside the [], which the current credentials. Lastly, you will need to enter your password, which is `postgres`.
 
-```
-Server [localhost]:
-Database [postgres]:
-Port [5432]:
-Username [postgres]:
-Password:
+<img src="img/psql_login.PNG" />
 
-```
-
-Once you have done so you will be logged into the PostgreSQL server and here we will create the database and load our data into it. 
+Once you have done so you will be logged into the PostgreSQL server and here we will create the database and load our data into it.
 
 You should be prompted with the following syntax on the terminal:
 
@@ -75,27 +68,27 @@ postgres=#
 
 ### Creating Database
 
-Here you will utilize SQL syntax to create a database for us to populate the sample data. 
+Here you will utilize SQL syntax to create a database for us to populate the sample data.
 
 
 ```
 postgres=# CREATE DATABASE northwind;
 ```
 
-You can check if you have created the database sucessfully by running:
+You can check if you have created the database successfully by running:
 
 ```
 postgres=# \d
 ```
 
 
-Here you should see northwind within the list of available databases. 
+Here you should see northwind within the list of available databases.
 
 ### Populating database
 
-We want to import the database from a file called a SQL dump. This has the necessary SQL operations to create the schemas available within the database including things such as the primary key. 
+We want to import the database from a file called a SQL dump. This has the necessary SQL operations to create the schemas available within the database including things such as the primary key.
 
-To do so you will need to know the path for where you cloned this repository, we will showcase this with a mock path. 
+To do so you will need to know the path for where you cloned this repository, we will showcase this with a mock path.
 
 
 ```
@@ -103,7 +96,7 @@ postgres=# \i 'C:/Users/ds_at_ucsb/sql_de_mayo/installation_and_setup/macos_and_
 
 ```
 
-Tip: If the path has `\` you can change them manually to `/` or `\\`.  
+Tip: If the path has `\` you must change them manually to `/` or `\\` or the command won't work.  
 
 You should be prompted with messages indicating that the database has been populated. You can exit out of the `psql` terminal and begin installing the PostgreSQL kernel for jupyter.
 
