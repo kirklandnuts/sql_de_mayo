@@ -13,3 +13,5 @@ git clone https://github.com/bgschiller/postgres_kernel;
 cd postgres_kernel;
 python setup.py build;
 python setup.py install;
+cd ..;
+rm -rf postgres_kernel;

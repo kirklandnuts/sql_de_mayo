@@ -1,4 +1,4 @@
 .DS_Store
 venv
-.ipynb_checkpoints
-kernel.log
+*.ipynb_checkpoints
+*.log
