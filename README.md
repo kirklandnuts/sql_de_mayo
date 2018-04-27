@@ -2,12 +2,12 @@
 Data Science at UCSB, in conjunction with Actuarial Association, FACTOR (Female Actuarial Organization), and FAME (Financial Analysis and Management Education) is hosting a SQL workshop this quarter (SPRING 2018)! This repository contains the workshop material.
 
 ## Contributors
-Here are the folks who helped create the material for this workshop!
-[Raul Eulogio](https://github.com/raviolli77)
-[Jason Freeberg](https://github.com/JasonFreeberg)
-[Shon Inouye](https://github.com/inouyesan)
-[Samantha Lee](http://github.com/samanthaklee/)
-[Timothy Nguyen](https://github.com/timothydnguyen/)
+Here are the folks who helped create the material for this workshop!  
+[Raul Eulogio](https://github.com/raviolli77)  
+[Jason Freeberg](https://github.com/JasonFreeberg)  
+[Shon Inouye](https://github.com/inouyesan)  
+[Samantha Lee](http://github.com/samanthaklee/)  
+[Timothy Nguyen](https://github.com/timothydnguyen/)  
 
 ## Contents
 **[installation_and_setup](https://github.com/timothydnguyen/SQL_de_Mayo/tree/master/installation_and_setup)** covers the process of getting up and running with PostgreSQL and Jupyter. Participants install those tools, configure a local database, and load it with data to be used in the workshop.
