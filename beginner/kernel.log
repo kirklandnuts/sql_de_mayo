@@ -438,3 +438,91 @@ HAVING COUNT(Orders.OrderID) > 10;
 fetching one from: 
 SELECT VERSION();
 ('PostgreSQL 10.3 on x86_64-apple-darwin17.3.0, compiled by Apple LLVM version 9.0.0 (clang-900.0.39.2), 64-bit',)
+inside init
+starting connection
+failed to connect to 
+starting connection
+fetching all from: 
+SELECT CompanyName, Address FROM Customers;
+fetching all from: 
+SELECT * FROM Customers;
+fetching all from: 
+SELECT Country FROM Customers;
+fetching all from: 
+SELECT DISTINCT Country FROM Customers;
+fetching all from: 
+SELECT * FROM Customers 
+WHERE Country = 'Mexico';
+fetching all from: 
+SELECT * FROM Customers
+WHERE Postalcode BETWEEN '05021' AND '05030';
+fetching all from: 
+SELECT companyname, contactname, country
+FROM Customers
+WHERE NOT country = 'Mexico';
+fetching all from: 
+SELECT DISTINCT * FROM Customers
+ORDER BY Country ASC;
+fetching all from: 
+SELECT * FROM Customers
+ORDER BY City ASC, Country DESC;
+fetching all from: 
+SELECT companyname, contacttitle, address, region
+FROM Customers
+WHERE Country != 'Italy '
+fetching all from: 
+SELECT CompanyName, Address FROM Customers;
+fetching all from: 
+SELECT DISTINCT(*)
+FROM Customers
+WHERE City = 'Sao Paulo'
+ORDER BY Country;
+fetching all from: 
+SELECT DISTINCT(*)
+FROM Customers
+WHERE City = 'Sao Paulo'
+ORDER BY Country;
+fetching all from: 
+SELECT DISTINCT *
+FROM Customers
+WHERE City = 'Sao Paulo'
+ORDER BY Country;
+fetching all from: 
+SELECT birthdate, address, city, homephone
+FROM Employees
+WHERE City = 'Seattle' AND region = 'WA'
+ORDER BY postalcode DESC;
+fetching all from: 
+SELECT AVG(UnitPrice) 
+FROM Order_Details;
+fetching all from: 
+SELECT DISTINCT CustomerID, shipname 
+FROM Orders
+ORDER BY CustomerID
+LIMIT 3;
+fetching all from: 
+SELECT firstname, lastname, address
+FROM Employees
+ORDER BY lastname;
+fetching all from: 
+SELECT firstname, lastname, address
+FROM Employees
+ORDER BY lastname
+LIMIT 10;
+fetching all from: 
+SELECT COUNT(*)
+FROM Employees
+WHERE City = 'London';
+inside init
+starting connection
+failed to connect to 
+inside init
+starting connection
+failed to connect to 
+inside init
+starting connection
+failed to connect to 
+inside init
+starting connection
+failed to connect to 
+starting connection

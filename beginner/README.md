@@ -118,6 +118,13 @@ Now let's move onto the tutorial! For this, we'll be using a Jupyter notebook in
 
 To begin, type into your terminal:
 
+#### Mac
+```
+$ cd sql_de_mayo
+$ jupyter notebook beginner/beginner_notebook.ipynb
+```
+
+#### Windows
 ```
 $ cd sql_de_mayo
 $ jupyter notebook beginner\beginner_notebook.ipynb

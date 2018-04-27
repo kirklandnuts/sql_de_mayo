@@ -71,14 +71,16 @@ $ cd ..
 $ ./jupyter_setup.sh
 ```
 
-That's it. Congratulations, you should be set up now!
+## Starting Your Virtual Environment
+A virtual environment is a tool to create isolated Python environments. This is where everything you installed will exist on your computer. Think of it as a computer inside your computer!
 
+To launch it, type into your terminal:
+```
+$ cd ../..
+$ source venv/bin/activate
+```
 
-
-
-
-
-
+That's it - you should be all set up. Congratulations, you're ready to begin!
 
 # ------- STOP HERE (DEPRECATED) --------
 

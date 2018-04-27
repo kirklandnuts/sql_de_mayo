@@ -89,9 +89,16 @@ In this section, we'll work on creating our own database to work with. This will
 
 Now that you have a little bit of background, let's begin! To start, open up the intermediate notebook by typing into your terminal:
 
+#### Mac
+```
+$ jupyter notebook intermediate/intermediate_notebook.ipynb
+```
+
+#### Windows
 ```
 $ jupyter notebook intermediate\intermediate_notebook.ipynb
 ```
+
 
 ## Sources
 This curriculum has drawn heavily the following online resources:
