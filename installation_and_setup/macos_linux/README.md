@@ -71,14 +71,20 @@ $ cd ..
 $ ./jupyter_setup.sh
 ```
 
-## Starting Your Virtual Environment
-A virtual environment is a tool to create isolated Python environments. This is where everything you installed will exist on your computer. Think of it as a computer inside your computer!
+## Starting Your Jupyter Notebook
 
-To launch it, type into your terminal:
+
+1. First, activate your virtual environment by navigating to the `sql_de_mayo` folder from your terminal and typing `source venv/bin/activate`. If you haven't done anything since the last set of instructions, your commands should look like this:
 ```
 $ cd ../..
 $ source venv/bin/activate
 ```
+2. launch jupyter notebook with the following command:
+```
+$ jupyter notebook
+```
+You should see a browser window open up displaying the Jupyter Notebook dashboard. From here, navigate to whichever notebook (identified by the `.ipynb` file extension) you want to launch and click on it to start it. We suggest starting with `beginner_notebook.ipynb` which is located in the `beginner` folder.
+
 
 That's it - you should be all set up. Congratulations, you're ready to begin!
 
