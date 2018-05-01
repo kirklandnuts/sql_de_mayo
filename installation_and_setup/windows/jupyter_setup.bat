@@ -1,4 +1,5 @@
 @echo off
+py -m pip install --upgrade pip
 py -m pip install virtualenv
 py -m virtualenv venv
 CALL venv\Scripts\activate.bat
