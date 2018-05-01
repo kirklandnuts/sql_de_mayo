@@ -49,7 +49,9 @@ To check if you already have git installed, run the following command in your te
 
 If you receive the message:
 
-<img src="img/git_status.PNG" />
+```
+fatal: Not a git repository (or any of the parent directories): .git
+```
 
 then you have git installed and can move on to the next section.
 
@@ -216,11 +218,11 @@ Now that everything should be set up, head over to your Jupyter Notebook window 
 
 Navigate to `beginner` > `beginner_notebook.ipynb` and run the section of code that connects the notebook to the database by clicking on the cell and pressing `CTRL + ENTER`:
 
-<img src="connect_database_ipynb.PNG" />
+<img src="img/connect_database_ipynb.PNG" />
 
 Finally, run the first section of code in the **Select Statements** section to make sure the connection to the populated database works.
 
-<img src="select_test_ipynb.PNG" />
+<img src="img/select_test_ipynb.PNG" />
 
 If a table shows up below your recently run code cell, then congratulations! You've successfully completed the installation and setup! We suggest scrolling back up to the top of the notebook and begin the tutorial.
 
