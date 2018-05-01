@@ -49,7 +49,7 @@ To check if you already have git installed, run the following command in your te
 
 If you receive the message:
 
-<img src="img/git_status.png" />
+<img src="img/git_status.PNG" />
 
 then you have git installed and can move on to the next section.
 
@@ -102,11 +102,11 @@ The Northwind database contains the sales data for a fictitious company called N
 
 First use the `window` button to search *psql*, upon opening the application you should be prompted with a terminal asking for credentials.
 
-<img src="img/psql_search.png" />
+<img src="img/psql_search.PNG" />
 
 You can press enter for all sections since leaving the responses blank default to the values inside the [], which the current credentials. Lastly, you will need to enter your password, which is `postgres`.
 
-<img src="img/psql_login.png" />
+<img src="img/psql_login.PNG" />
 
 Once you have done so you will be logged into the PostgreSQL server and here we will create the database and load our data into it.
 
@@ -216,11 +216,11 @@ Now that everything should be set up, head over to your Jupyter Notebook window 
 
 Navigate to `beginner` > `beginner_notebook.ipynb` and run the section of code that connects the notebook to the database by clicking on the cell and pressing `CTRL + ENTER`:
 
-<img src="connect_database_ipynb.png" />
+<img src="connect_database_ipynb.PNG" />
 
 Finally, run the first section of code in the **Select Statements** section to make sure the connection to the populated database works.
 
-<img src="select_test_ipynb.png" />
+<img src="select_test_ipynb.PNG" />
 
 If a table shows up below your recently run code cell, then congratulations! You've successfully completed the installation and setup! We suggest scrolling back up to the top of the notebook and begin the tutorial.
 
