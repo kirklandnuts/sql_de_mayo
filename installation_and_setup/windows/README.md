@@ -79,9 +79,15 @@ To check if you already have Python installed, run the following command in the 
 > py --version
 ```
 
-If you have Python version 3.X, you can move on to the next section.
+If you receive a message that indicates you have Python version 3.X, you can move on to the next section.
 
-If you have Python version 2.X or do not have python installed, you will need to install the latest version of [Python (version 3.6.5)](https://www.python.org/downloads/).
+If you receive the message:
+
+```
+'py' is not recognized as an internal or external command, operable program or batch file.
+```
+
+or if you receive a message that indicates you have Python version 2.X, you will need to install the latest version of [Python (version 3.6.5)](https://www.python.org/downloads/).
 
 During the Python instllation process, you will need to check the box that adds Python 3.6 to PATH.
 
@@ -91,6 +97,36 @@ After installation, run the following command in your terminal again to ensure P
 ```
 > py --version
 ```
+
+
+## Installing PostgreSQL Kernel
+We've compiled the commands needed to run `PostgreSQL` within a `jupyter notebook`. This step requires that PostgreSQL be installed from the previous step.
+
+1. Clone this repository (copy its contents onto your machine) by running the following command in your terminal:
+```
+> git clone https://github.com/timothydnguyen/sql_de_mayo
+```
+2. Navigate within the cloned repository to the directory containing the installation script using the following command:
+```
+> cd sql_de_mayo/installation_and_setup/windows
+```
+3. Execute the script with the following command:
+```
+> jupyter_setup.bat
+```
+
+4. You can utilize by entering the following commands to open a jupyter notebook inside your virtualenv:
+
+```
+> cd ../..
+```
+
+   And then:
+
+```
+> jupyter notebook
+```
+Upon entering this you should be able to create both python and PostgreSQL kernels!
 
 
 ## Loading Data into Databases
@@ -131,7 +167,7 @@ postgres=# CREATE DATABASE northwind;
 You can check if you have created the database successfully by running:
 
 ```
-postgres=# \l
+postgres=# \list
 ```
 
 
@@ -142,7 +178,7 @@ Here you should see northwind within the list of available databases.
 Before we populate the Northwind database, we will first connect to the database by running the following command:
 
 ```
-postgres=$ \c northwind;
+postgres=# \c northwind;
 ```
 
 We want to import the database from a file called a SQL dump. This has the necessary SQL operations to create the schemas available within the database including things such as the primary key.
@@ -159,45 +195,17 @@ Tip: If the path has `\` you must change them manually to `/` or `\\` or the com
 
 You should be prompted with messages indicating that the database has been populated. You can exit out of the `psql` terminal and begin installing the PostgreSQL kernel for jupyter.
 
-## Installing PostgreSQL Kernel
-We've compiled the commands needed to run `PostgreSQL` within a `jupyter notebook`. This step requires that PostgreSQL be installed from the previous step.
-
-1. Clone this repository (copy its contents onto your machine) by running the following command in your terminal:
-```
-> git clone https://github.com/timothydnguyen/sql_de_mayo
-```
-2. Navigate within the cloned repository to the directory containing the installation script using the following command:
-```
-> cd sql_de_mayo/installation_and_setup/windows
-```
-3. Execute the script with the following command:
-```
-> jupyter_setup.bat
-```
-
-4. You can utilize by entering the following commands to open a jupyter notebook inside your virtualenv:
-
-```
-> cd ../..
-```
-
-   And then:
-
-```
-> jupyter notebook
-```
-Upon entering this you should be able to create both python and PostgreSQL kernels!
-
-
 ### Creating User
 For the windows download to be successful, you will need to create a new user (for this example we will call it *timmy*) which you will need to allow admin access to be able to download and install PostgreSQL. More information [here](https://support.microsoft.com/en-us/help/4026923/windows-create-a-local-user-or-administrator-account-in-windows-10)
 
 
-
 ## Running pgAdmin4
 
-At this point, PostgreSQL should be running on your compuyrt but we still need a way to easily work with it, [pgAdmin4](https://www.pgadmin.org/) provides a graphical user interface (GUI) to do just that. Luckily for windows the installer comes bundled with pgAdmin4 so use the `window` button to search for pgAdmin. Once opened you should be prompted with:
+At this point, PostgreSQL should be running on your computer but we still need a way to easily work with it, [pgAdmin4](https://www.pgadmin.org/) provides a graphical user interface (GUI) to do just that. Luckily for windows, the installer comes bundled with pgAdmin4 so use the `window` button to search for pgAdmin. 
 
+<img src="img/pgAdmin_search.PNG" />
+
+Once opened you should be prompted with:
 
 <img src="img/pgAdmin_launch.png" />
 
@@ -209,8 +217,10 @@ Next we need to add the server to pgAdmin4,
 
 <img src="img/connection_parameters.png" />
 
+Once this is done you should have pgAdmin connected to your local server! You can look at the top left corner of pgAdmin4 to ensure that your `sql_de_mayo` server has been connected.
 
-Once this is done you should have pgAdmin connected to your local server!
+<img src="img/pgAdmin_show_server.PNG" />
+
 
 ## Running Jupyter Notebook
 
