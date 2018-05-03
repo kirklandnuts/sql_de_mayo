@@ -529,3 +529,17 @@ starting connection
 inside init
 starting connection
 failed to connect to 
+inside init
+starting connection
+failed to connect to 
+starting connection
+fetching all from: 
+SELECT DISTINCT * FROM Customers
+WHERE country = 'France'
+ORDER BY city
+fetching one from: 
+SELECT VERSION();
+('PostgreSQL 10.3 on x86_64-apple-darwin17.3.0, compiled by Apple LLVM version 9.0.0 (clang-900.0.39.2), 64-bit',)
+inside init
+starting connection
+failed to connect to 
