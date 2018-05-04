@@ -239,7 +239,7 @@ Finally, run the first section of code in the **Select Statements** section to m
 
 If a table shows up below your recently run code cell, then congratulations! You've successfully completed the installation and setup! 
 
-## Opening Virtual Environment and Running Jupyter Notebook
+## Activate Virtual Environment and Running Jupyter Notebook
 
 If you exit your terminal and open it up again, you will find that you will no longer be in your virtual environment. You will need to get back in your virtual environment in order to run your Jupyter Notebook again.
 
