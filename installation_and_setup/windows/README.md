@@ -15,7 +15,14 @@ the command `[COMMAND]` should be entered into a command prompt, which is native
 
 ## Contents
 - [Installing PostgreSQL](#installing-postgresql)
+- [Installing Git](#installing-git)
+- [Installing Python](#installing-python)
 - [Installing PostgreSQL Kernel](#installing-psql-kernel)
+- [Loading Data into Databases](#loading-data-into-databases)
+- [Running pgAdmin4](#running-pgadmin4)
+- [Running Jupyter Notebook](#running-jupyter-notebook)
+- [Activate Virtual Environment and Running Jupyter Notebook](#activate-virtual-environment-and-running-jupyter-notebook)
+
 
 ## Installing PostgreSQL
 
@@ -37,8 +44,17 @@ You should be prompted with the following window which you will use to set the a
 
 Create a password for your user. We will be setting **postgres** as your username **and** password for troubleshooting issues. This can be changed later if needed.
 
+<img src="img/postgres_password.PNG" />
+
 PostgreSQL utilizes port 5432 so when prompted to enter port, **enter 5432**.
+
 Choose the default locale for PostgreSQL, and you should be done with the installation process!
+
+At the end of the installation process, you may uncheck the box asking if you want to launch Stack Builder at exit.
+
+<img src="img/postgres_setup_stackbuilder.PNG" />
+
+Now that PostgreSQL is installed, we can check if you have Git and Python installed.
 
 ## Installing Git
 
@@ -140,6 +156,8 @@ First use the `window` button to search *psql*, upon opening the application you
 You can press enter for all sections since leaving the responses blank default to the values inside the [], which the current credentials. Lastly, you will need to enter your password, which is `postgres`.
 
 <img src="img/psql_login.PNG" />
+
+Note that for security reasons, you won't be able to see your password when you type it in.
 
 Once you have done so you will be logged into the PostgreSQL server and here we will create the database and load our data into it.
 
