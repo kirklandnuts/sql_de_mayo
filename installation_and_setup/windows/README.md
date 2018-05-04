@@ -118,16 +118,11 @@ We've compiled the commands needed to run `PostgreSQL` within a `jupyter noteboo
 4. You can utilize by entering the following commands to open a jupyter notebook inside your virtualenv:
 
 ```
-> cd ../..
-```
-
-   And then:
-
-```
 > jupyter notebook
 ```
 Upon entering this you should be able to create both python and PostgreSQL kernels!
 
+Note: You can stop running the jupyter notebook by pressing `CTRL + C`.
 
 ## Loading Data into Databases
 
@@ -191,6 +186,14 @@ northwind=# \i 'C:/Users/ds_at_ucsb/sql_de_mayo/installation_and_setup/windows/d
 
 ```
 
+Note that `/ds_at_ucsb/` will need to be replaced with the path to your `sql_de_mayo` directory.
+
+In this example:
+
+<img src="img/path_to_sqldemayo.PNG" />
+
+We would replace `/ds_at_ucsb/` with `/Shon/Documents/MyProjects/DataScience/`.
+
 Tip: If the path has `\` you must change them manually to `/` or `\\` or the command won't work.  
 
 You should be prompted with messages indicating that the database has been populated. You can exit out of the `psql` terminal and begin installing the PostgreSQL kernel for jupyter.
@@ -234,6 +237,28 @@ Finally, run the first section of code in the **Select Statements** section to m
 
 <img src="img/select_test_ipynb.PNG" />
 
-If a table shows up below your recently run code cell, then congratulations! You've successfully completed the installation and setup! We suggest scrolling back up to the top of the notebook and begin the tutorial.
+If a table shows up below your recently run code cell, then congratulations! You've successfully completed the installation and setup! 
 
-Good luck!
+## Opening Virtual Environment and Running Jupyter Notebook
+
+If you exit your terminal and open it up again, you will find that you will no longer be in your virtual environment. You will need to get back in your virtual environment in order to run your Jupyter Notebook again.
+
+1. Navigate to your `sql_de_mayo` directory.
+
+```
+> cd sql_de_mayo
+```
+
+2. Activate your virtual environment.
+
+```
+> venv\Scripts\activate
+```
+
+3. Launch your Jupyter Notebook.
+
+```
+> jupyter notebook
+```
+
+Your Jupyter Notebook should launch in your browser window and you will be ready to start/continue the tutorial!
