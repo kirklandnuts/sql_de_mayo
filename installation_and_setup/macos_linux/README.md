@@ -63,10 +63,6 @@ $ ./create_db.sh
 ## Configuring Jupyter Notebook to run PostgreSQL
 We'll be using [Jupyter Notebooks](http://jupyter.org/) to write our SQL queries. Once set up, Jupyter notebooks are very interactive and easy to use, making them a good choice for learning. Notebooks typically set up to work with Python code, but we've written a script to configure them to run on a [PostgreSQL kernel](https://github.com/bgschiller/postgres_kernel).
 
-1. In your terminal, navigate back to `sql_de_mayo`. If you haven't done anything since the previous set of instructions, the command should be as follows:
-```
-$ cd ..
-```
 2. Then, run the jupyter setup script with the following command:
 ```
 $ ./jupyter_setup.sh
