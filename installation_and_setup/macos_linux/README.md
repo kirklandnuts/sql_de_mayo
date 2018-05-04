@@ -26,7 +26,8 @@ $ cd sql_de_mayo/installation_and_setup/macos_linux
 ```
 $ ./install_psql.sh
 ```
-Note that you will be asked to enter a password; this is the password to your user account on your computer.
+Note that you will be asked to enter a password; this is the password to your user account on your computer. If you are asked to install "XCode Command Line Tools", press the `return` key. This command may take a while to complete.
+
 4. Check that you have installed PostgreSQL properly by checking the version number with the following command:
 ```
 $ postgres -V
