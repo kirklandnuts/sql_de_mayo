@@ -6,6 +6,8 @@ $ [COMMAND]
 ```
 the command `[COMMAND]` should be entered into a linux shell, which can be accessed through a program such as `Terminal` (preinstalled on MacOS).
 
+ALSO, at various points throughout this process, you will be prompted to enter password. In these cases, your input won't be displayed on screen for security purposes, so don't worry when you don't see what you're typing. Simply type what you intend, and hit enter.
+
 ## Contents
 - [Installing PostgreSQL](#installing-postgresql)
 - [Loading Data into Databases](#loading-data-into-databases)
