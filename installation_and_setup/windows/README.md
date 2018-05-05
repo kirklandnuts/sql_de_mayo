@@ -58,6 +58,7 @@ At the end of the installation process, you may uncheck the box asking if you wa
 
 Now that PostgreSQL is installed, we can check if you have Git and Python installed.
 
+
 ## Installing Git
 
 To check if you already have git installed, run the following command in your terminal:
