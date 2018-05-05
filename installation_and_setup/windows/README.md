@@ -262,21 +262,25 @@ If a table shows up below your recently run code cell, then congratulations! You
 
 ## Activate Virtual Environment and Running Jupyter Notebook
 
-If you exit your terminal and open it up again, you will find that you will no longer be in your virtual environment. You will need to get back in your virtual environment in order to run your Jupyter Notebook again.
+If you exit your terminal and open it up again, you will find that you will no longer be in your virtual environment. You will need to get back in your virtual environment in order to run your Jupyter Notebook again. You will also need to start your `sql_de_mayo` server from pgAdmin4 again.
 
-1. Navigate to your `sql_de_mayo` directory.
+1. Open pgAdmin. Click the `+` next to `sql_de_mayo` under **Servers** and answer your password to connect to that server.
+
+<img src="img/pgAdmin_show_server.PNG" />
+
+2. Navigate to your `sql_de_mayo` directory in the command prompt.
 
 ```
 > cd sql_de_mayo
 ```
 
-2. Activate your virtual environment.
+3. Activate your virtual environment.
 
 ```
 > venv\Scripts\activate
 ```
 
-3. Launch your Jupyter Notebook.
+4. Launch your Jupyter Notebook.
 
 ```
 > jupyter notebook
