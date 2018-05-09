@@ -13,9 +13,18 @@ NOTE: Throughout this guide, `>` denotes the windows command prompt. So, when th
 ```
 the command `[COMMAND]` should be entered into a command prompt, which is natively installed on windows.
 
+ALSO, at various points throughout this process, you will be prompted to enter password. In these cases, your input won't be displayed on screen for security purposes, so don't worry when you don't see what you're typing. Simply type what you intend, and hit enter.
+
 ## Contents
 - [Installing PostgreSQL](#installing-postgresql)
+- [Installing Git](#installing-git)
+- [Installing Python](#installing-python)
 - [Installing PostgreSQL Kernel](#installing-psql-kernel)
+- [Loading Data into Databases](#loading-data-into-databases)
+- [Running pgAdmin4](#running-pgadmin4)
+- [Running Jupyter Notebook](#running-jupyter-notebook)
+- [Activate Virtual Environment and Running Jupyter Notebook](#activate-virtual-environment-and-running-jupyter-notebook)
+
 
 ## Installing PostgreSQL
 
@@ -37,8 +46,18 @@ You should be prompted with the following window which you will use to set the a
 
 Create a password for your user. We will be setting **postgres** as your username **and** password for troubleshooting issues. This can be changed later if needed.
 
+<img src="img/postgres_password.PNG" />
+
 PostgreSQL utilizes port 5432 so when prompted to enter port, **enter 5432**.
+
 Choose the default locale for PostgreSQL, and you should be done with the installation process!
+
+At the end of the installation process, you may uncheck the box asking if you want to launch Stack Builder at exit.
+
+<img src="img/postgres_setup_stackbuilder.PNG" />
+
+Now that PostgreSQL is installed, we can check if you have Git and Python installed.
+
 
 ## Installing Git
 
@@ -118,16 +137,11 @@ We've compiled the commands needed to run `PostgreSQL` within a `jupyter noteboo
 4. You can utilize by entering the following commands to open a jupyter notebook inside your virtualenv:
 
 ```
-> cd ../..
-```
-
-   And then:
-
-```
 > jupyter notebook
 ```
 Upon entering this you should be able to create both python and PostgreSQL kernels!
 
+Note: You can stop running the jupyter notebook by pressing `CTRL + C`.
 
 ## Loading Data into Databases
 
@@ -145,6 +159,8 @@ First use the `window` button to search *psql*, upon opening the application you
 You can press enter for all sections since leaving the responses blank default to the values inside the [], which the current credentials. Lastly, you will need to enter your password, which is `postgres`.
 
 <img src="img/psql_login.PNG" />
+
+Note that for security reasons, you won't be able to see your password when you type it in.
 
 Once you have done so you will be logged into the PostgreSQL server and here we will create the database and load our data into it.
 
@@ -191,6 +207,14 @@ northwind=# \i 'C:/Users/ds_at_ucsb/sql_de_mayo/installation_and_setup/windows/d
 
 ```
 
+Note that `/ds_at_ucsb/` will need to be replaced with the path to your `sql_de_mayo` directory.
+
+In this example:
+
+<img src="img/path_to_sqldemayo.PNG" />
+
+We would replace `/ds_at_ucsb/` with `/Shon/Documents/MyProjects/DataScience/`.
+
 Tip: If the path has `\` you must change them manually to `/` or `\\` or the command won't work.  
 
 You should be prompted with messages indicating that the database has been populated. You can exit out of the `psql` terminal and begin installing the PostgreSQL kernel for jupyter.
@@ -234,6 +258,32 @@ Finally, run the first section of code in the **Select Statements** section to m
 
 <img src="img/select_test_ipynb.PNG" />
 
-If a table shows up below your recently run code cell, then congratulations! You've successfully completed the installation and setup! We suggest scrolling back up to the top of the notebook and begin the tutorial.
+If a table shows up below your recently run code cell, then congratulations! You've successfully completed the installation and setup! 
 
-Good luck!
+## Activate Virtual Environment and Running Jupyter Notebook
+
+If you exit your terminal and open it up again, you will find that you will no longer be in your virtual environment. You will need to get back in your virtual environment in order to run your Jupyter Notebook again. You will also need to start your `sql_de_mayo` server from pgAdmin4 again.
+
+1. Open pgAdmin. Click the `+` next to `sql_de_mayo` under **Servers** and answer your password to connect to that server.
+
+<img src="img/pgAdmin_show_server.PNG" />
+
+2. Navigate to your `sql_de_mayo` directory in the command prompt.
+
+```
+> cd sql_de_mayo
+```
+
+3. Activate your virtual environment.
+
+```
+> venv\Scripts\activate
+```
+
+4. Launch your Jupyter Notebook.
+
+```
+> jupyter notebook
+```
+
+Your Jupyter Notebook should launch in your browser window and you will be ready to start/continue the tutorial!
